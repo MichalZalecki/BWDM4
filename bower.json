@@ -1,0 +1,25 @@
+{
+  "name": "BWDM4",
+  "version": "1.0.0",
+  "authors": [
+    "MichalRazorZalecki"
+  ],
+  "main": "index.php",
+  "license": "MIT",
+  "homepage": "http://michal.zalecki.pl",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5-boilerplate": "~4.3.0",
+    "inuit.css": "~5.0.1",
+    "WOW": "~0.1.12",
+    "font-awesome": "~4.1.0",
+    "jquery": "~2.1.1"
+  }
+}

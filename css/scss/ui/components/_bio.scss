@@ -1,0 +1,154 @@
+.bio {
+    @include border-radius(6px);
+    border-color: #d8d8d8;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    margin-bottom: $base-line-height;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+    .bio__bg {
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    .bio__avatar {
+        @include transform(translateX(-50%) translateY(-50%));
+        position: absolute !important;
+        top: 250px;
+        left: 50%;
+        cursor: pointer;
+    }
+
+    .bio__avatar,
+    .bio__avatar__flipper,
+    .bio__avatar__flipper__front,
+    .bio__avatar__flipper__back {
+        @include size(180px);
+    }
+
+        .bio__avatar__flipper__front,
+        .bio__avatar__flipper__back {
+            @include border-radius(50%);
+            border-bottom: 1px solid #d8d8d8;
+            overflow: hidden;
+            background-color: #d8d8d8;
+        }
+
+            .bio__avatar__flipper__back__link {
+                @include font-size(56px);
+                line-height: 180px;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+    .bio__info {
+        padding: $base-line-height * 4 $base-line-height $base-line-height;
+    }
+
+        .bio__info__name {
+            text-align: center;
+        }
+
+        .bio__info__list {
+            margin: 0;
+            text-align: center;
+        }
+
+        .bio__info__list__item__link {
+            @include transition(all 300ms linear);
+            @include size(48px);
+            @include font-size(22px);
+            position: relative;
+            text-align: center;
+            line-height: 48px;
+            text-decoration: none;
+            margin: 0 5px;
+            color: black;
+            &:hover {
+                .bio__info__list__item__svg {
+                    @include transform(translateX(-3px) translateY(-3px));
+                    @include size(54px);
+                }
+                .bio__info__list__item__svg__path {
+                    stroke-dashoffset: 0
+                }
+            }
+        }
+
+        .no-smil .bio__info__list__item__link {
+            .bio__info__list__item__svg__path {
+                opacity: 0;
+            }
+             &:hover {
+                .bio__info__list__item__svg__path {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .bio__info__list__item__link--rss {
+            &:hover {
+                color: #FF6600;
+                .bio__info__list__item__svg__path {
+                    stroke: #FF6600;
+                }
+            }
+        }
+
+        .bio__info__list__item__link--facebook {
+            &:hover {
+                color: #3B5998;
+                .bio__info__list__item__svg__path {
+                    stroke: #3B5998;
+                }
+            }
+        }
+
+        .bio__info__list__item__link--google-plus {
+            &:hover {
+                color: #DD4B39;
+                .bio__info__list__item__svg__path {
+                    stroke: #DD4B39;
+                }
+            }
+        }
+
+        .bio__info__list__item__link--github {
+            &:hover {
+                color: #4183C4;
+                .bio__info__list__item__svg__path {
+                    stroke: #4183C4;
+                }
+            }
+        }
+
+        .bio__info__list__item__link--twitter {
+            &:hover {
+                color: #00ABF0;
+                .bio__info__list__item__svg__path {
+                    stroke: #00ABF0;
+                }
+            }
+        }
+
+            .bio__info__list__item__svg {
+                @include transition(all 300ms linear);
+                @include size(48px);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+                .bio__info__list__item__svg__path {
+                    @include transition(all 300ms linear);
+                    fill: none;
+                    stroke: black;
+                    stroke-width: 4;
+                }

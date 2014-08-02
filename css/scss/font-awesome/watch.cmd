@@ -1,0 +1,1 @@
+sass --watch font-awesome.scss:../../font-awesome.css --style expanded
